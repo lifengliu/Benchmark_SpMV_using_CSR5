@@ -169,6 +169,7 @@ int anonymouslibHandle<ANONYMOUSLIB_IT, ANONYMOUSLIB_UIT, ANONYMOUSLIB_VT>::asCS
         malloc_time += malloc_timer.stop();
 
         // step 2. generate partition descriptor
+		tile_desc_timer.start();
 
         _num_offsets = 0;
         err = generate_partition_descriptor(_csr5_sigma, _p, _m,
